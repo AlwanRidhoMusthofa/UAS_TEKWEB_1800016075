@@ -1,0 +1,23 @@
+<div class="container">
+    <button class="btn-tambah" mat-raised-button color="primary" (click)="tambahStock()">Add Stock</button>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Zakki Kelontong</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let item of dataStock">
+            <h3 matLine> {{item.Barang}} </h3>
+            <p matLine>
+              <span> {{item.Jumlah}} </span>
+            </p>
+            <p matLine>
+              <span>{{item.Harga}} </span>
+            </p>
+            <button class="btn-edit" mat-raised-button color="accent">Edit</button>
+            <button class="btn-selesai" mat-raised-button color="warn">Delete</button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
